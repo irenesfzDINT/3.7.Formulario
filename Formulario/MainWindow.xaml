@@ -6,8 +6,181 @@
         xmlns:local="clr-namespace:Formulario"
         mc:Ignorable="d"
         Icon="assets/form.ico"
-        Title="Formulario" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Formulario"
+        Height="554.802"
+        Width="900"
+        MinHeight="554.802"
+        MinWidth="900">
+
+    <DockPanel LastChildFill="False">
+        <!--Cabecera-->
+        <TextBlock DockPanel.Dock="Top"
+                   FontSize="40"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center">Formulario</TextBlock>
+        <!--Footer-->
+        <DockPanel  LastChildFill="False"
+                    DockPanel.Dock="Bottom">
+            <TextBlock DockPanel.Dock="Left"
+                       FontSize="20"
+                       FontStyle="Italic"
+                       Margin="5">Irene Sánchez</TextBlock>
+            <Button DockPanel.Dock="Right"
+                    Margin="5"
+                    Width="100"
+                    FontSize="13">Cancelar</Button>
+            <Button DockPanel.Dock="Right"
+                    Margin="5"
+                    Height="30"
+                    Width="100"
+                    FontSize="13">Aceptar</Button>
+        </DockPanel>
+        <Grid DockPanel.Dock="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="125"></RowDefinition>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--Imagen-->
+            <Image Grid.Column="1"
+                   Grid.RowSpan="3"
+                   Source="assets/foto.jpg"
+                   Stretch="Fill"
+                   Margin="5,5,15,5"></Image>
+
+            <!--Contenedor formulario 1-->
+            <Grid Grid.Column="0"
+                  Grid.Row="0">
+                <!--Borde con efecto-->
+                <Border BorderThickness="3"
+                        BorderBrush="Black"
+                        CornerRadius="3"
+                        Padding="10"
+                        Margin="10">
+                    <Border.Effect>
+                        <DropShadowEffect />
+                    </Border.Effect>
+                </Border>
+                <!--Borde contenedor de datos-->
+                <Border BorderThickness="3"
+                        Background="#FF78ACEA"
+                        BorderBrush="Black"
+                        CornerRadius="3"
+                        Padding="10"
+                        Margin="10">
+                    <!--Primer formulario-->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="65"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition Width="25"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <!--Añado textblock, textbox e imagen-->
+                        <!--fila 1-->
+                        <TextBlock DockPanel.Dock="Left"
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Margin="5">Nombre</TextBlock>
+                        <TextBox Grid.Row="0"
+                                 Grid.Column="1"
+                                 Margin="5"></TextBox>
+                        <Image Source="assets/info.png"
+                               Height="20"
+                               Grid.Row="0"
+                               Grid.Column="2"
+                               ToolTip="Máximo 100 caracteres"></Image>
+                        <!--fila 2-->
+                        <TextBlock DockPanel.Dock="Left"
+                                   Grid.Row="1"
+                                   Grid.Column="0"
+                                   Margin="5">Edad</TextBlock>
+                        <TextBox Grid.Row="1"
+                                 Grid.Column="1"
+                                 Margin="5"></TextBox>
+                        <Image Source="assets/info.png"
+                               Height="20"
+                               Grid.Row="1"
+                               Grid.Column="2"
+                               ToolTip="Número entero entre 0 y 100"></Image>
+                        <!--fila 3-->
+                        <TextBlock DockPanel.Dock="Left"
+                                   Grid.Row="2"
+                                   Grid.Column="0"
+                                   Margin="5">Dirección</TextBlock>
+                        <TextBox Grid.Row="2"
+                                 Grid.Column="1"
+                                 Margin="5"></TextBox>
+                        <Image Source="assets/info.png"
+                               Height="20"
+                               Grid.Row="2"
+                               Grid.Column="2"
+                               ToolTip="Incluir código postal"></Image>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="0"
+                  Grid.Row="1">
+                <!--Borde con efectos-->
+                <Border BorderThickness="3"
+                        BorderBrush="Black"
+                        CornerRadius="3"
+                        Padding="10"
+                        Margin="10">
+                    <Border.Effect>
+                        <DropShadowEffect />
+                    </Border.Effect>
+                </Border>
+                <!--Borde contenedor de datos (Sin efecto sombra)-->
+                <Border BorderThickness="3"
+                        Background="#FFF1E1CD"
+                        BorderBrush="Black"
+                        CornerRadius="3"
+                        Padding="5"
+                        Margin="10">
+                    <!--Formulario 2-->
+                    <WrapPanel>
+                        <!--Aficiones-->
+                        <GroupBox Header="Aficiones"
+                                  Width="200"
+                                  Margin="5"
+                                  BorderBrush="Aqua">
+                            <StackPanel Margin="8">
+                                <CheckBox Content="Hacer deporte" />
+                                <CheckBox Content="Viajar" />
+                                <CheckBox Content="Ver Series" />
+                                <CheckBox Content="Leer comics" />
+                            </StackPanel>
+                        </GroupBox>
+                        <!--Estado civil-->
+                        <GroupBox Header="Estado civil"
+                                  Width="200"
+                                  Margin="5"
+                                  BorderBrush="Aqua">
+                            <StackPanel Margin="8">
+                                <RadioButton Content="Soltero"
+                                             IsChecked="True"
+                                             GroupName="EstadoCivil"></RadioButton>
+                                <RadioButton Content="Casado"
+                                             GroupName="EstadoCivil"></RadioButton>
+                                <RadioButton Content="Divorciado"
+                                             GroupName="EstadoCivil"></RadioButton>
+                                <RadioButton Content="Viudo"
+                                             GroupName="EstadoCivil"></RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                    </WrapPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </DockPanel>
 </Window>

@@ -100,5 +100,9 @@
   <ItemGroup>
     <Resource Include="assets\form.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assets\foto.jpg" />
+    <Resource Include="assets\info.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
