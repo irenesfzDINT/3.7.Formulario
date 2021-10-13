@@ -123,7 +123,7 @@
 
             <Grid Grid.Column="0"
                   Grid.Row="1">
-                <!--Borde contenedor de datos (Sin efecto sombra)-->
+                <!--Borde contenedor de datos-->
                 <Border BorderThickness="3"
                         Background="#FFF1E1CD"
                         BorderBrush="Black"
