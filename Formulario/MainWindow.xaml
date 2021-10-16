@@ -25,15 +25,8 @@
                        FontSize="20"
                        FontStyle="Italic"
                        Margin="5">Irene Sánchez</TextBlock>
-            <Button DockPanel.Dock="Right"
-                    Margin="5"
-                    Width="100"
-                    FontSize="13">Cancelar</Button>
-            <Button DockPanel.Dock="Right"
-                    Margin="5"
-                    Height="30"
-                    Width="100"
-                    FontSize="13">Aceptar</Button>
+            <Button>Cancelar</Button>
+            <Button>Aceptar</Button>
         </DockPanel>
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
@@ -56,15 +49,8 @@
             <Grid Grid.Column="0"
                   Grid.Row="0">
                 <!--Borde contenedor de datos-->
-                <Border BorderThickness="3"
-                        Background="#FF78ACEA"
-                        BorderBrush="Black"
-                        CornerRadius="3"
-                        Padding="10"
-                        Margin="10">
-                    <Border.Effect>
-                        <DropShadowEffect />
-                    </Border.Effect>
+                <Border Style="{StaticResource BordeFormulario}"
+                        Background="#FF78ACEA">
                     <!--Primer formulario-->
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -79,41 +65,35 @@
                         </Grid.RowDefinitions>
                         <!--Añado textblock, textbox e imagen-->
                         <!--fila 1-->
-                        <TextBlock DockPanel.Dock="Left"
+                        <TextBlock Style="{StaticResource Datos}"
                                    Grid.Row="0"
-                                   Grid.Column="0"
-                                   Margin="5">Nombre</TextBlock>
+                                   Grid.Column="0">Nombre</TextBlock>
                         <TextBox Grid.Row="0"
                                  Grid.Column="1"
                                  Margin="5"></TextBox>
-                        <Image Source="assets/info.png"
-                               Height="20"
+                        <Image Style="{StaticResource ImagenInfo}"
                                Grid.Row="0"
                                Grid.Column="2"
                                ToolTip="Máximo 100 caracteres"></Image>
                         <!--fila 2-->
-                        <TextBlock DockPanel.Dock="Left"
+                        <TextBlock Style="{StaticResource Datos}"
                                    Grid.Row="1"
-                                   Grid.Column="0"
-                                   Margin="5">Edad</TextBlock>
+                                   Grid.Column="0">Edad</TextBlock>
                         <TextBox Grid.Row="1"
                                  Grid.Column="1"
                                  Margin="5"></TextBox>
-                        <Image Source="assets/info.png"
-                               Height="20"
+                        <Image Style="{StaticResource ImagenInfo}"
                                Grid.Row="1"
                                Grid.Column="2"
                                ToolTip="Número entero entre 0 y 100"></Image>
                         <!--fila 3-->
-                        <TextBlock DockPanel.Dock="Left"
+                        <TextBlock Style="{StaticResource Datos}"
                                    Grid.Row="2"
-                                   Grid.Column="0"
-                                   Margin="5">Dirección</TextBlock>
+                                   Grid.Column="0">Dirección</TextBlock>
                         <TextBox Grid.Row="2"
                                  Grid.Column="1"
                                  Margin="5"></TextBox>
-                        <Image Source="assets/info.png"
-                               Height="20"
+                        <Image Style="{StaticResource ImagenInfo}"
                                Grid.Row="2"
                                Grid.Column="2"
                                ToolTip="Incluir código postal"></Image>
@@ -124,22 +104,15 @@
             <Grid Grid.Column="0"
                   Grid.Row="1">
                 <!--Borde contenedor de datos-->
-                <Border BorderThickness="3"
-                        Background="#FFF1E1CD"
-                        BorderBrush="Black"
-                        CornerRadius="3"
-                        Padding="5"
-                        Margin="10">
+                <Border Style="{StaticResource BordeFormulario}"
+                        Background="#FFF1E1CD">
                     <Border.Effect>
                         <DropShadowEffect />
                     </Border.Effect>
                     <!--Formulario 2-->
-                    <WrapPanel>
+                    <WrapPanel Height="200">
                         <!--Aficiones-->
-                        <GroupBox Header="Aficiones"
-                                  Width="200"
-                                  Margin="5"
-                                  BorderBrush="Aqua">
+                        <GroupBox Header="Aficiones">
                             <StackPanel Margin="8">
                                 <CheckBox Content="Hacer deporte" />
                                 <CheckBox Content="Viajar" />
@@ -148,10 +121,7 @@
                             </StackPanel>
                         </GroupBox>
                         <!--Estado civil-->
-                        <GroupBox Header="Estado civil"
-                                  Width="200"
-                                  Margin="5"
-                                  BorderBrush="Aqua">
+                        <GroupBox Header="Estado civil">
                             <StackPanel Margin="8">
                                 <RadioButton Content="Soltero"
                                              IsChecked="True"

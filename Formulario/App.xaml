@@ -4,6 +4,62 @@
              xmlns:local="clr-namespace:Formulario"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--Botones-->
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin"
+                    Value="5"></Setter>
+            <Setter Property="Width"
+                    Value="100"></Setter>
+            <Setter Property="Height"
+                    Value="30"></Setter>
+            <Setter Property="FontSize"
+                    Value="13"></Setter>
+            <Setter Property="DockPanel.Dock"
+                    Value="Right"></Setter>
+        </Style>
+        <!--Bordes-->
+        <Style TargetType="{x:Type Border}"
+               x:Key="BordeFormulario">
+            <Setter Property="BorderBrush"
+                    Value="Black"></Setter>
+            <Setter Property="Padding"
+                    Value="10"></Setter>
+            <Setter Property="Margin"
+                    Value="10"></Setter>
+            <Setter Property="BorderThickness"
+                    Value="3"></Setter>
+            <Setter Property="CornerRadius"
+                    Value="3"></Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect></DropShadowEffect>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--GroupBox-->
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="Width"
+                    Value="200"></Setter>
+            <Setter Property="Margin"
+                    Value="5"></Setter>
+            <Setter Property="BorderBrush"
+                    Value="Aqua"></Setter>
+        </Style>
+        <!--TextBlock datos-->
+        <Style TargetType="{x:Type TextBlock}"
+               x:Key="Datos">
+            <Setter Property="DockPanel.Dock"
+                    Value="Left"></Setter>
+            <Setter Property="Margin"
+                    Value="5"></Setter>
+        </Style>
+        <!--Imagenes info-->
+        <Style  TargetType="{x:Type Image}"
+                x:Key="ImagenInfo">
+            <Setter Property="Source"
+                    Value="assets/info.png"></Setter>
+            <Setter Property="Height"
+                    Value="20"></Setter>
+        </Style>
     </Application.Resources>
 </Application>
